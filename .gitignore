@@ -1,0 +1,63 @@
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyInstaller
+build/
+dist/
+
+# Logs and cache
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# ========================================
+# FastAPI / Uvicorn
+# ========================================
+# Local run cache
+*.db
+*.sqlite3
+
+# ========================================
+# Environment & Credentials
+# ========================================
+.env
+.env.local
+.env.*.local
+
+# ========================================
+# IDE & Editor files
+# ========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ========================================
+# OS-specific files
+# ========================================
+Thumbs.db
+.DS_Store
+ehthumbs.db
