@@ -1,10 +1,20 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 # import router
 from routers import chat,llm,db_ops,workflow
 from database.models import create_conversation_table
 
 app=FastAPI(title="FlowGenX Backend")
+
+# Added CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Create table at startup
 create_conversation_table()
