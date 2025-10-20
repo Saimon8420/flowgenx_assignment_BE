@@ -17,7 +17,11 @@ app.add_middleware(
 )
 
 # Create table at startup
-create_conversation_table()
+try:
+    create_conversation_table()
+except Exception as e:
+    print(f"Error creating conversation table: {e}")
+    raise # Re-raise the exception to prevent the app from starting
 
 #Register the router
 app.include_router(chat.router)

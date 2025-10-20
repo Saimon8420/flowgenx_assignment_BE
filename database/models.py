@@ -1,7 +1,7 @@
 from .connection import get_connection
 
+# Create DB table
 def create_conversation_table():
-    """Create table"""
     try:
         with get_connection() as conn:
             with conn.cursor() as cur:
