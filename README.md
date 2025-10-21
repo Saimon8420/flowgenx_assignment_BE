@@ -64,13 +64,23 @@ Create a `.env` file in the root directory of the project (`flowgenx_backend/`) 
 DATABASE_URL="postgresql://user:password@host:port/database_name"
 ```
 
+Replace with open ai api key
+
+```
+OPENAI_API_KEY="sk-proj-******************************************************"
+```
+
 **Example:**
 
 ```
 DATABASE_URL="postgresql://postgres:mysecretpassword@localhost:5432/flowgenx_db"
 ```
 
-Ensure your PostgreSQL database is running and accessible with the provided credentials.
+```
+OPENAI_API_KEY="sk-proj-******************************************************"
+```
+
+Ensure open ai api key is working and your PostgreSQL database is running and accessible with the provided credentials.
 
 ## Running the Application
 
