@@ -1,18 +1,16 @@
 import os
-from openai import OpenAI
+import openai  # ← Import module, not class
 from dotenv import load_dotenv
 
 load_dotenv()
-client=OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")  # ← Set globally
 
-# Send message to OpenAI and get the response
-def process_llm_message(message:str):
+def process_llm_message(message: str):
     try:
-        response=client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4o-mini",
-            messages=[{"role":"user","content":message}]
+            messages=[{"role": "user", "content": message}]
         )
-        return response.choices[0].message.content.strip()
-    
+        return response.choices[0].message["content"].strip()
     except Exception as e:
         return f"Error calling OpenAI: {str(e)}"
